@@ -1,0 +1,24 @@
+"year","sample","virus","aviti_detected","ont_detected"
+2024,"Sample1","MPXV",TRUE,TRUE
+2024,"Sample1","HIV-1",TRUE,TRUE
+2024,"Sample2","EVD68",TRUE,TRUE
+2024,"Sample2","HSV-2",TRUE,TRUE
+2024,"Sample2","Influenza A",TRUE,TRUE
+2024,"Sample3","CMV",TRUE,TRUE
+2024,"Sample4","EVD68",TRUE,TRUE
+2024,"Sample4","HSV-1",TRUE,TRUE
+2024,"Sample4","MPXV",TRUE,TRUE
+2024,"Sample6","EVD68",TRUE,TRUE
+2024,"Sample6","HSV-1",TRUE,TRUE
+2024,"Sample6","HSV-2",TRUE,FALSE
+2025,"Sample1","EVD68",TRUE,TRUE
+2025,"Sample1","HSV-2",TRUE,TRUE
+2025,"Sample1","Influenza A",TRUE,TRUE
+2025,"Sample3","MPXV",TRUE,TRUE
+2025,"Sample3","HIV-1",TRUE,TRUE
+2025,"Sample4","EVD68",TRUE,TRUE
+2025,"Sample4","HSV-1",TRUE,TRUE
+2025,"Sample4","HSV-2",TRUE,TRUE
+2025,"Sample4","Influenza A",TRUE,TRUE
+2025,"Sample5","CMV",TRUE,TRUE
+2025,"Sample6*","HadV-4",FALSE,TRUE
