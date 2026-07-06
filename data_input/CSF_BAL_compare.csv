@@ -1,0 +1,77 @@
+﻿sample_ID,virus,virus_ct,equiv_AVITI_species,equiv_ONT_species,reflex_tested,reflex_positive,routinely_tested,sample_type
+B1,Parainfluenza_type_2,34.9,Human orthorubulavirus 2,Respirovirus pneumoniae,yes,yes,yes,BAL
+B1,CMV,29.8,Human betaherpesvirus 5,Cytomegalovirus humanbeta5,,,yes,BAL
+B1,Entero_rhino,32.4,Rhinovirus B,Enterovirus betarhino,yes,no,yes,BAL
+B2,hMPV,34.3,Human metapneumovirus,Metapneumovirus hominis,,,yes,BAL
+B2,EBV,32,Human gammaherpesvirus 4,Lymphocryptovirus humangamma4,yes,no,no,BAL
+B3,RSV,41.9,"Respiratory syncytial virus, Human orthopneumovirus ","Human respiratory syncytial virus A, Human respiratory syncytial virus B",yes,no,yes,BAL
+B3,hMPV,36.2,Human metapneumovirus,Metapneumovirus hominis,yes,yes,yes,BAL
+B3,EBV,30.2,Human gammaherpesvirus 4,Lymphocryptovirus humangamma4,,,no,BAL
+B3,HSV1,36.1,Human alphaherpesvirus 1,Simplexvirus humanalpha1,yes,no,yes,BAL
+B4,HSV1,36.6,Human alphaherpesvirus 1,Simplexvirus humanalpha1,,,yes,BAL
+B4,EBV,30.9,Human gammaherpesvirus 4,Lymphocryptovirus humangamma4,,,no,BAL
+B4,HPyV6,positive,Deltapolyomavirus sextihominis,Deltapolyomavirus sextihominis,,,no,BAL
+B5,influenza_A,21.2,Influenza A virus,Alphainfluenzavirus influenzae,,,yes,BAL
+B5,Entero_rhino,19,Rhinovirus C,Enterovirus cerhino,,,yes,BAL
+B5,EBV,22.5,Human gammaherpesvirus 4,Lymphocryptovirus humangamma4,,,no,BAL
+B5,HHV7,positive,Human betaherpesvirus 7,Roseolovirus humanbeta7,,,no,BAL
+B6,EBV,39.4,Human gammaherpesvirus 4,Lymphocryptovirus humangamma4,,,no,BAL
+B6,HHV6,38.8,"Human betaherpesvirus 6B, Human betaherpesvirus 6A","Roseolovirus humanbeta6b, Roseolovirus humanbeta6a",,,no,BAL
+B6,HHV7,positive,Human betaherpesvirus 7,Roseolovirus humanbeta7,,,no,BAL
+B7,Adenovirus,33,g_Mastadenovirus,g_Mastadenovirus,yes,yes,yes,BAL
+B7,sars_cov_2,37.6,Severe acute respiratory syndrome-related coronavirus,Betacoronavirus pandemicum,yes,yes,yes,BAL
+B7,EBV,25.2,Human gammaherpesvirus 4,Lymphocryptovirus humangamma4,,,no,BAL
+B7,HHV6,39.4,"Human betaherpesvirus 6B, Human betaherpesvirus 6A","Roseolovirus humanbeta6b, Roseolovirus humanbeta6a",,,no,BAL
+B8,EBV,35.6,Human gammaherpesvirus 4,Lymphocryptovirus humangamma4,,,no,BAL
+B8,HHV6,36,"Human betaherpesvirus 6B, Human betaherpesvirus 6A","Roseolovirus humanbeta6b, Roseolovirus humanbeta6a",,,no,BAL
+B9,HHV6,31.5,"Human betaherpesvirus 6B, Human betaherpesvirus 6A","Roseolovirus humanbeta6b, Roseolovirus humanbeta6a",,,no,BAL
+B9,HHV7,positive,Human betaherpesvirus 7,Roseolovirus humanbeta7,,,no,BAL
+B10,HHV6,35.2,"Human betaherpesvirus 6B, Human betaherpesvirus 6A","Roseolovirus humanbeta6b, Roseolovirus humanbeta6a",,,no,BAL
+B11,HHV7,positive,Human betaherpesvirus 7,Roseolovirus humanbeta7,,,no,BAL
+B12,Parainfluenza_type_3,22,Human respirovirus 3,Respirovirus pneumoniae,,,yes,BAL
+B12,HSV1,22.9,Human alphaherpesvirus 1,Simplexvirus humanalpha1,,,yes,BAL
+B12,EBV,28.9,Human gammaherpesvirus 4,Lymphocryptovirus humangamma4,,,no,BAL
+B12,HHV7,positive,Human betaherpesvirus 7,Roseolovirus humanbeta7,,,no,BAL
+B13,Parainfluenza_type_1,35.3,Human respirovirus 1,Respirovirus laryngotracheitidis,,,yes,BAL
+B13,Entero_rhino,14,Rhinovirus B,Enterovirus betarhino,,,yes,BAL
+B13,EBV,32.7,Human gammaherpesvirus 4,Lymphocryptovirus humangamma4,,,no,BAL
+B13,HHV-7,positive,Human betaherpesvirus 7,Roseolovirus humanbeta7,,,no,BAL
+B14,Adenovirus,34.9,Human mastadenovirus C,Mastadenovirus caesari,,,yes,BAL
+B15,corona_OC43,26,Betacoronavirus 1,Betacoronavirus gravedinis,,,yes,BAL
+B15,RSV,19.4,"Respiratory syncytial virus, Human orthopneumovirus ",Orthopneumovirus hominis,,,yes,BAL
+B15,EBV,28.9,Human gammaherpesvirus 4,Lymphocryptovirus humangamma4,,,no,BAL
+B15,HHV6,35.4,"Human betaherpesvirus 6B, Human betaherpesvirus 6A","Roseolovirus humanbeta6b, Roseolovirus humanbeta6a",,,no,BAL
+B16,Adenovirus,32.3,Human mastadenovirus A,Mastadenovirus adami,,,yes,BAL
+B16,HSV1,36.3,Human alphaherpesvirus 1,Simplexvirus humanalpha1,yes,no,yes,BAL
+B16,HHV6,35.7,"Human betaherpesvirus 6B, Human betaherpesvirus 6A","Roseolovirus humanbeta6b, Roseolovirus humanbeta6a",,,no,BAL
+B16,HHV7,positive,Human betaherpesvirus 7,Roseolovirus humanbeta7,,,no,BAL
+B17,influenza_A,29.3,Influenza A virus,Alphainfluenzavirus influenzae,,,yes,BAL
+B17,HSV1,22,Human alphaherpesvirus 1,Simplexvirus humanalpha1,,,yes,BAL
+B17,EBV,23.6,Human gammaherpesvirus 4,Lymphocryptovirus humangamma4,,,no,BAL
+B17,HHV6,37.6,"Human betaherpesvirus 6B, Human betaherpesvirus 6A","Roseolovirus humanbeta6b, Roseolovirus humanbeta6a",,,no,BAL
+B18,corona_NL63,25.3,Human coronavirus NL63,Alphacoronavirus amsterdamense,,,yes,BAL
+B18,CMV,25.1,Human betaherpesvirus 5,Cytomegalovirus humanbeta5,,,yes,BAL
+B18,HHV-7,positive,Human betaherpesvirus 7,Roseolovirus humanbeta7,,,no,BAL
+B19,HHV6,34.9,"Human betaherpesvirus 6B, Human betaherpesvirus 6A","Roseolovirus humanbeta6b, Roseolovirus humanbeta6a",,,no,BAL
+B19,HHV-7,positive,Human betaherpesvirus 7,Roseolovirus humanbeta7,,,no,BAL
+B20,EBV,positive,Human gammaherpesvirus 4,Lymphocryptovirus humangamma4,,,no,BAL
+B20,HHV7,positive,Human betaherpesvirus 7,Roseolovirus humanbeta7,,,no,BAL
+B21,enterovirus_D68,33.5,Enterovirus D,Enterovirus deconjuncti ,,,yes,BAL
+B21,RSV,38,"Respiratory syncytial virus, Human orthopneumovirus ","Human respiratory syncytial virus A, Human respiratory syncytial virus B",,,yes,BAL
+B21,HHV7,positive,Human betaherpesvirus 7,Roseolovirus humanbeta7,,,no,BAL
+C1,VZV,26.3,Human alphaherpesvirus 3,Varicellovirus humanalpha3,,,yes,CSF
+C2,HSV1,29.3,Human alphaherpesvirus 1,Simplexvirus humanalpha1,,,yes,CSF
+C2,EBV,28,Human gammaherpesvirus 4,Lymphocryptovirus humangamma4,,,no,CSF
+C3,HHV6,28.9,"Human betaherpesvirus 6B, Human betaherpesvirus 6A","Roseolovirus humanbeta6b, Roseolovirus humanbeta6a",,,yes,CSF
+C4,Polyomavirus,"2,87 log copies/ml",Betapolyomavirus secuhominis,Betapolyomavirus secuhominis,,,yes,CSF
+C4,HHV6,33,"Human betaherpesvirus 6B, Human betaherpesvirus 6A","Roseolovirus humanbeta6b, Roseolovirus humanbeta6a",,,no,CSF
+C5,HSV2,33.9,Human alphaherpesvirus 2,Simplexvirus humanalpha1,,,yes,CSF
+C6,Echovirus30,32.1,Enterovirus B,Enterovirus betacoxsackie,,,yes,CSF
+C7,EBV,"2,01 log IU/ml",Human gammaherpesvirus 4,Lymphocryptovirus humangamma4,,,yes,CSF
+C8,negative,,,,,,,
+C9,negative,,,,,,,
+C10,negative,,,,,,,
+C11,negative,,,,,,,
+C12,negative,,,,,,,
+C13,negative,,,,,,,
+C14,negative,,,,,,,
