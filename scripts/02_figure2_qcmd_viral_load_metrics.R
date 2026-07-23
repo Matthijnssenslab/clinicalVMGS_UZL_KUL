@@ -37,6 +37,69 @@ raw$aviti_total_filtered_reads <- to_num(raw$aviti_total_filtered_reads)
 raw$ont_reads                <- to_num(raw$ont_reads)
 raw$ont_genome_cov_pct       <- to_num(raw$ont_genome_cov_pct)
 raw$ont_total_mapped_reads   <- to_num(raw$ont_total_mapped_reads)
+
+# QCMD 2025 Sample6* (HadV-4) was originally left blank in QCMD_overview.csv.
+# Backfill it from the highest-read matching raw AVITI and ONT records so this
+# target is included even when only this plotting script is updated.
+hadv_idx <- which(
+  raw$year == 2025 &
+    raw$sample == "Sample6*" &
+    raw$virus == "HadV-4"
+)
+if (length(hadv_idx) != 1L) {
+  stop("Expected exactly one 2025 Sample6* HadV-4 row in QCMD_overview.csv")
+}
+
+if (raw$aviti_reads[hadv_idx] == 0 && raw$aviti_genome_cov_pct[hadv_idx] == 0) {
+  aviti_2025 <- read.csv(
+    file.path(source_dir, "2025_QCMD.csv"),
+    stringsAsFactors = FALSE,
+    check.names = FALSE
+  )
+  aviti_hadv <- aviti_2025[
+    aviti_2025$sample_ID == "QCMD6_Q6" &
+      grepl("Human mastadenovirus E", aviti_2025$species, ignore.case = TRUE),
+    ,
+    drop = FALSE
+  ]
+  aviti_hadv$reads_num <- to_num(aviti_hadv$reads_aligned)
+  aviti_hadv <- aviti_hadv[
+    is.finite(aviti_hadv$reads_num) & aviti_hadv$reads_num > 0,
+    ,
+    drop = FALSE
+  ]
+  if (nrow(aviti_hadv) == 0L) stop("No raw AVITI HadV-4 record found for QCMD 2025 Sample6*")
+  aviti_hadv <- aviti_hadv[order(-aviti_hadv$reads_num), , drop = FALSE][1, , drop = FALSE]
+  raw$aviti_reads[hadv_idx] <- aviti_hadv$reads_num
+  raw$aviti_depth[hadv_idx] <- to_num(aviti_hadv$mean_coverage)
+  raw$aviti_genome_cov_pct[hadv_idx] <-
+    100 * to_num(aviti_hadv$covered_bases) / to_num(aviti_hadv$reference_length)
+}
+
+if (raw$ont_reads[hadv_idx] == 0 && raw$ont_genome_cov_pct[hadv_idx] == 0) {
+  if (!requireNamespace("readxl", quietly = TRUE)) {
+    stop("Package 'readxl' is required to recover the QCMD HadV-4 ONT record")
+  }
+  ont_raw <- as.data.frame(readxl::read_excel(file.path(source_dir, "Query.xls"), sheet = "Sheet0"))
+  ont_hadv <- ont_raw[
+    ont_raw$SampleName == "NGS_meta_25S_06" &
+      grepl("exoticum", ont_raw$StrainName, ignore.case = TRUE),
+    ,
+    drop = FALSE
+  ]
+  ont_hadv$reads_num <- to_num(ont_hadv$NbReads)
+  ont_hadv <- ont_hadv[
+    is.finite(ont_hadv$reads_num) & ont_hadv$reads_num > 0,
+    ,
+    drop = FALSE
+  ]
+  if (nrow(ont_hadv) == 0L) stop("No raw ONT HadV-4 record found for QCMD 2025 Sample6*")
+  ont_hadv <- ont_hadv[order(-ont_hadv$reads_num), , drop = FALSE][1, , drop = FALSE]
+  raw$ont_reads[hadv_idx] <- ont_hadv$reads_num
+  raw$ont_depth[hadv_idx] <- to_num(ont_hadv$DepthOfCoverage)
+  raw$ont_genome_cov_pct[hadv_idx] <- to_num(ont_hadv$GenomeCoveragePct)
+}
+
 raw$aviti_rpm <- ifelse(raw$aviti_total_filtered_reads > 0,
                         raw$aviti_reads / raw$aviti_total_filtered_reads * 1e6, 0)
 raw$ont_rpm   <- ifelse(raw$ont_total_mapped_reads > 0,
@@ -108,7 +171,10 @@ p_cov <- ggplot(long_df, aes(x = vl_log10, y = genome_cov_pct, color = method)) 
         plot.title = element_text(face = "bold"))
 cor_rpm_aviti <- spearman_label(long_df[long_df$method == "AVITI", ], "vl_log10", "rpm_log1", "AVITI")
 cor_rpm_ont   <- spearman_label(long_df[long_df$method == "ONT",   ], "vl_log10", "rpm_log1", "ONT")
-cor_rpm_label <- paste(c(cor_rpm_aviti, cor_rpm_ont), collapse = "\n")
+cor_rpm_label <- paste(
+  sub(", n =", "\n  n =", c(cor_rpm_aviti, cor_rpm_ont), fixed = TRUE),
+  collapse = "\n"
+)
 rpm_max    <- max(long_df$rpm, na.rm = TRUE)
 rpm_ticks  <- c(0, 1, 10, 100, 1000, 10000, 100000, 1e6)
 rpm_ticks  <- rpm_ticks[rpm_ticks <= rpm_max * 1.2]
