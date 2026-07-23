@@ -1,5 +1,10 @@
 #!/usr/bin/env Rscript
 
+# This figure evaluates only the viruses expected in each QCMD sample.
+# Consequently, off-target signals and potential false positives are not
+# represented here. This limitation is a primary reason for developing the
+# data-driven cut-off approach used elsewhere in the analysis.
+
 library(ggplot2)
 
 this_file <- local({
