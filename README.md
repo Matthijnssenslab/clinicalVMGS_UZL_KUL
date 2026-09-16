@@ -1,4 +1,4 @@
-# Clinical viral metagenomics in cerebrospinal fluid and bronchoalveolar lavage
+# Short- and long-read hybrid-capture viral metagenomics reach high sensitivity and specificity with data-driven cut-offs compared with routine diagnostics in CSF and BAL specimens
 
 Thank you for your interest in our study!
 
